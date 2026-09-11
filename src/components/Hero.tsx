@@ -6,7 +6,7 @@ export default function Hero() {
     <section>
       {/* Full-bleed autoplaying background video (GIF-style: muted, looped,
           no controls) spanning the whole band, left edge to right edge. */}
-      <div className="relative h-[46vh] min-h-70 w-full bg-neutral-900 sm:h-[60vh]">
+      <div className="relative h-[52vh] min-h-80 w-full bg-neutral-900 sm:h-[66vh]">
         <HeroVideo
           src="/videos/hero.mp4"
           ariaLabel="Vozilo iz ponude AM Motors"
@@ -40,6 +40,8 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+
+      <div className="h-px w-full bg-neutral-200" />
     </section>
   );
 }
