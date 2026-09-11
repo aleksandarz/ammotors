@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const leftLinks = [
-  { href: "/prodaja-kola", label: "Prodaja kola" },
-  { href: "/uvoz-kola", label: "Uvoz kola" },
+  { href: "/#otkup-prodaja", label: "Prodaja kola" },
+  { href: "/#uvoz-vozila", label: "Uvoz kola" },
 ];
 
 const rightLinks = [

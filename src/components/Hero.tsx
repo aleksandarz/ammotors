@@ -1,23 +1,33 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section>
-      {/* Split image band — replace the two background images in
-          public/images (hero-left.jpg / hero-right.jpg) with real photos. */}
+      {/* Split image band — replace the two images in public/images
+          (hero-left.jpg / hero-right.jpg) with real photos. Loaded with
+          priority since this is the first thing visible (LCP element). */}
       <div className="grid h-[46vh] min-h-[280px] w-full grid-cols-1 sm:h-[60vh] sm:grid-cols-2">
-        <div
-          className="bg-neutral-900 bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/hero-left.jpg)" }}
-          role="img"
-          aria-label="Vozilo iz ponude AM Motors"
-        />
-        <div
-          className="hidden bg-neutral-800 bg-cover bg-center sm:block"
-          style={{ backgroundImage: "url(/images/hero-right.jpg)" }}
-          role="img"
-          aria-label="Vozilo iz ponude AM Motors"
-        />
+        <div className="relative bg-neutral-900">
+          <Image
+            src="/images/hero-left.jpg"
+            alt="Vozilo iz ponude AM Motors"
+            fill
+            sizes="(min-width: 640px) 50vw, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative hidden bg-neutral-800 sm:block">
+          <Image
+            src="/images/hero-right.jpg"
+            alt="Vozilo iz ponude AM Motors"
+            fill
+            sizes="50vw"
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-16 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10">
@@ -34,13 +44,13 @@ export default function Hero() {
 
         <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
           <Link
-            href="/prodaja-kola"
+            href="/#otkup-prodaja"
             className="inline-flex h-12 items-center justify-center rounded-full bg-neutral-900 px-8 text-xs font-medium tracking-[0.15em] text-white uppercase transition-colors hover:bg-accent"
           >
             Prodaja kola
           </Link>
           <Link
-            href="/uvoz-kola"
+            href="/#uvoz-vozila"
             className="inline-flex h-12 items-center justify-center rounded-full border border-neutral-300 px-8 text-xs font-medium tracking-[0.15em] text-neutral-800 uppercase transition-colors hover:border-accent hover:text-accent"
           >
             Uvoz kola

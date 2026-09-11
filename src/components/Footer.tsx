@@ -56,13 +56,13 @@ export default function Footer() {
         <div className="mt-6 flex w-full flex-col items-center gap-4 border-t border-neutral-800 pt-6 sm:flex-row sm:justify-between">
           <nav className="flex items-center gap-6">
             <Link
-              href="/prodaja-kola"
+              href="/#otkup-prodaja"
               className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase hover:text-accent"
             >
               Prodaja kola
             </Link>
             <Link
-              href="/uvoz-kola"
+              href="/#uvoz-vozila"
               className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase hover:text-accent"
             >
               Uvoz kola
