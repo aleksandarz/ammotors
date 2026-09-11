@@ -16,7 +16,7 @@ export default function Footer() {
             AM MOTORS
           </span>
           <span className="mt-1 text-[0.65rem] font-medium tracking-[0.35em] text-neutral-400 uppercase">
-            Prodaja i uvoz vozila
+            Otkup i prodaja vozila
           </span>
         </Link>
 
@@ -69,19 +69,19 @@ export default function Footer() {
               href="/#otkup-prodaja"
               className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase hover:text-accent"
             >
-              Prodaja kola
+              Otkup vozila
             </Link>
             <Link
               href="/#uvoz-vozila"
               className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase hover:text-accent"
             >
-              Uvoz kola
+              Uvoz vozila
             </Link>
           </nav>
 
           <nav className="flex items-center gap-6">
             <Link
-              href="/o-nama"
+              href="/#o-nama"
               className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase hover:text-accent"
             >
               O nama

@@ -16,11 +16,11 @@ export default function Hero() {
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-16 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10">
         <div>
           <h1 className="font-serif text-3xl font-semibold tracking-wide text-neutral-900 uppercase sm:text-4xl lg:text-5xl">
-            Luksuzni automobili na prodaju
+            Vozila svih vrsta na prodaju
           </h1>
           <div className="mt-4 h-px w-16 bg-accent" />
           <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 sm:text-base">
-            AM Motors donosi pažljivo odabrana vozila iz prodaje i uvoza, uz
+            AM Motors donosi pažljivo odabrana vozila iz otkupa i uvoza, uz
             proveren kvalitet i potpunu podršku kroz ceo proces kupovine.
           </p>
         </div>
@@ -30,13 +30,13 @@ export default function Hero() {
             href="/#otkup-prodaja"
             className="inline-flex h-12 items-center justify-center rounded-full bg-neutral-900 px-8 text-xs font-medium tracking-[0.15em] text-white uppercase transition-colors hover:bg-accent"
           >
-            Prodaja kola
+            Otkup vozila
           </Link>
           <Link
             href="/#uvoz-vozila"
             className="inline-flex h-12 items-center justify-center rounded-full border border-neutral-300 px-8 text-xs font-medium tracking-[0.15em] text-neutral-800 uppercase transition-colors hover:border-accent hover:text-accent"
           >
-            Uvoz kola
+            Uvoz vozila
           </Link>
         </div>
       </div>

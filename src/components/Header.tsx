@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 const leftLinks = [
-  { href: "/#otkup-prodaja", label: "Prodaja kola" },
-  { href: "/#uvoz-vozila", label: "Uvoz kola" },
+  { href: "/#otkup-prodaja", label: "Otkup vozila" },
+  { href: "/#uvoz-vozila", label: "Uvoz vozila" },
 ];
 
 const rightLinks = [
-  { href: "/o-nama", label: "O nama" },
+  { href: "/#o-nama", label: "O nama" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -57,7 +57,7 @@ export default function Header() {
             AM MOTORS
           </span>
           <span className="mt-1 text-[0.65rem] font-medium tracking-[0.35em] text-neutral-500 uppercase">
-            Prodaja i uvoz vozila
+            Otkup i prodaja vozila
           </span>
         </Link>
       </div>
@@ -81,7 +81,7 @@ export default function Header() {
             AM MOTORS
           </span>
           <span className="mt-1 text-[0.65rem] font-medium tracking-[0.35em] text-neutral-500 uppercase">
-            Prodaja i uvoz vozila
+            Otkup i prodaja vozila
           </span>
         </Link>
 
@@ -95,26 +95,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="tel:+381665938839"
-            aria-label="Pozovite nas"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-800 transition-colors hover:border-accent hover:text-accent"
-          >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.5}
-              className="h-4.5 w-4.5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.5 1.5 0 0 0-1.147-1.457l-3.61-.902a1.5 1.5 0 0 0-1.594.556l-.638.852a1.5 1.5 0 0 1-1.712.494 11.99 11.99 0 0 1-6.516-6.516 1.5 1.5 0 0 1 .494-1.712l.852-.638a1.5 1.5 0 0 0 .556-1.594l-.902-3.61A1.5 1.5 0 0 0 5.622 2.25H4.25A2.25 2.25 0 0 0 2.25 4.5v.75Z"
-              />
-            </svg>
-          </a>
         </nav>
       </div>
 
