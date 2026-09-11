@@ -38,9 +38,12 @@ export default function AboutSection() {
         <h3 className="mt-12 text-xs font-semibold tracking-[0.2em] text-neutral-900 uppercase">
           Zašto baš mi
         </h3>
-        <ul className="mx-auto mt-6 grid max-w-2xl gap-4 text-left sm:grid-cols-2">
+        <ul className="mx-auto mt-6 grid max-w-2xl gap-4 text-center sm:grid-cols-2 sm:text-left">
           {reasons.map((reason) => (
-            <li key={reason} className="flex items-start gap-3">
+            <li
+              key={reason}
+              className="flex items-start justify-center gap-3 sm:justify-start"
+            >
               <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-accent text-accent">
                 <FaCheck aria-hidden="true" className="h-2.5 w-2.5" />
               </span>

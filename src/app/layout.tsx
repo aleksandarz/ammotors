@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, Playfair_Display } from "next/font/google";
+import { Fraunces, Inter, Italiana } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,9 +8,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const italiana = Italiana({
+  variable: "--font-italiana",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -30,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="sr"
-      className={`${inter.variable} ${playfair.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${inter.variable} ${italiana.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-neutral-900">
         {children}

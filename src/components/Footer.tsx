@@ -21,7 +21,9 @@ export default function Footer() {
         </Link>
 
         <p className="text-xs font-medium tracking-[0.2em] text-neutral-300 uppercase">
-          Luke Ćelovića Trebinjca, Beograd, Srbija
+          Luke Ćelovića Trebinjca
+          <br />
+          Beograd, Srbija
         </p>
 
         <div className="flex items-center gap-5">

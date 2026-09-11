@@ -32,7 +32,7 @@ export default function Hero() {
 
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-16 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10">
         <div>
-          <h1 className="font-serif text-3xl font-semibold tracking-wide text-neutral-900 uppercase sm:text-4xl lg:text-5xl">
+          <h1 className="font-serif text-3xl tracking-wide text-neutral-900 uppercase sm:text-4xl lg:text-5xl">
             Luksuzni automobili na prodaju
           </h1>
           <div className="mt-4 h-px w-16 bg-accent" />
