@@ -14,7 +14,7 @@ export default function Home() {
         <SplitFeatureSection
           id="otkup-prodaja"
           title={["OTKUP VOZILA"]}
-          description="Otkupljujemo sve vrste vozila – ispravna, neispravna i havarisana, bez obzira na marku, model ili godište. Izlazimo na teren, radimo besplatnu procenu i isplaćujemo odmah, u kešu, bez čekanja i suvišne papirologije. Kako otkup podrazumeva brzu isplatu i preuzimanje svih obaveza oko vozila, otkupna cena je nešto niža od tržišne vrednosti – to je cena koju plaćamo za brzinu, jednostavnost i sigurnost celog procesa."
+          description="Otkupljujemo sve vrste vozila – ispravna, neispravna i havarisana, bez obzira na marku, model ili godište. Izlazimo na teren, radimo besplatnu procenu i isplaćujemo odmah, u kešu, bez čekanja i suvišne papirologije. Kako otkup podrazumeva brzu isplatu i preuzimanje svih obaveza oko vozila, otkupna cena je niža od tržišne vrednosti – to je cena koju plaćamo za brzinu, jednostavnost i sigurnost celog procesa."
           ctaLabel="Saznajte više"
           ctaHref="/prodaja-kola"
           imageSrc="/images/otkup-prodaja.jpg"
