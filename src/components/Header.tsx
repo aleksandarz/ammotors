@@ -53,7 +53,7 @@ export default function Header() {
           </button>
         </div>
         <Link href="/" className="flex flex-col items-center pb-4 text-center">
-          <span className="font-serif text-2xl tracking-[0.06em] text-neutral-900">
+          <span className="font-serif text-2xl font-bold tracking-[0.06em] text-neutral-900">
             AM MOTORS
           </span>
           <span className="mt-1 text-[0.65rem] font-medium tracking-[0.35em] text-neutral-500 uppercase">
@@ -77,7 +77,7 @@ export default function Header() {
         </nav>
 
         <Link href="/" className="flex flex-col items-center text-center">
-          <span className="font-serif text-3xl tracking-[0.06em] text-neutral-900">
+          <span className="font-serif text-3xl font-bold tracking-[0.06em] text-neutral-900">
             AM MOTORS
           </span>
           <span className="mt-1 text-[0.65rem] font-medium tracking-[0.35em] text-neutral-500 uppercase">

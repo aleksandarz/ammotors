@@ -10,11 +10,12 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  /* Italiana is the site-wide font (including the logo). It only covers
-     the "latin" subset, so Inter is kept right behind it purely as a
-     silent glyph fallback for č/ć/š/ž/đ, which Italiana doesn't have. */
-  --font-sans: var(--font-italiana), var(--font-inter);
-  --font-serif: var(--font-italiana), var(--font-inter);
+  /* Montserrat is the site-wide font (including the logo). It ships a
+     latin-ext subset, so č/ć/š/ž/đ render natively — no fallback font
+     needed. font-serif is kept as an alias so existing font-serif
+     classes across components still resolve to the same font. */
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-montserrat);
 }
 
 body {

@@ -1,35 +1,21 @@
-import Image from "next/image";
 import Link from "next/link";
 import HeroVideo from "@/components/HeroVideo";
 
 export default function Hero() {
   return (
     <section>
-      {/* Split image band — replace the right-side image in public/images
-          (hero-right.jpg) with a real photo. The left side autoplays a
-          muted, looping background video (GIF-style) instead of a photo. */}
-      <div className="grid h-[46vh] min-h-[280px] w-full grid-cols-1 sm:h-[60vh] sm:grid-cols-2">
-        <div className="relative bg-neutral-900">
-          <HeroVideo
-            src="/videos/hero-left.mp4"
-            ariaLabel="Vozilo iz ponude AM Motors"
-          />
-        </div>
-        <div className="relative hidden bg-neutral-800 sm:block">
-          <Image
-            src="/images/hero-right.jpg"
-            alt="Vozilo iz ponude AM Motors"
-            fill
-            sizes="50vw"
-            className="object-cover"
-            priority
-          />
-        </div>
+      {/* Full-bleed autoplaying background video (GIF-style: muted, looped,
+          no controls) spanning the whole band, left edge to right edge. */}
+      <div className="relative h-[46vh] min-h-70 w-full bg-neutral-900 sm:h-[60vh]">
+        <HeroVideo
+          src="/videos/hero.mp4"
+          ariaLabel="Vozilo iz ponude AM Motors"
+        />
       </div>
 
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-16 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10">
         <div>
-          <h1 className="font-serif text-3xl tracking-wide text-neutral-900 uppercase sm:text-4xl lg:text-5xl">
+          <h1 className="font-serif text-3xl font-semibold tracking-wide text-neutral-900 uppercase sm:text-4xl lg:text-5xl">
             Luksuzni automobili na prodaju
           </h1>
           <div className="mt-4 h-px w-16 bg-accent" />

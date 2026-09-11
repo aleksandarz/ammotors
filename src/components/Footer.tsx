@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="mt-auto bg-neutral-950 text-white">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6">
         <Link href="/" className="flex flex-col items-center">
-          <span className="font-serif text-3xl tracking-[0.06em]">
+          <span className="font-serif text-3xl font-bold tracking-[0.06em]">
             AM MOTORS
           </span>
           <span className="mt-1 text-[0.65rem] font-medium tracking-[0.35em] text-neutral-400 uppercase">

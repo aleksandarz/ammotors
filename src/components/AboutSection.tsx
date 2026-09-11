@@ -23,7 +23,7 @@ export default function AboutSection() {
             : "translate-y-8 opacity-0 motion-reduce:translate-y-0 motion-reduce:opacity-100"
         }`}
       >
-        <h2 className="font-serif text-3xl uppercase tracking-wide text-neutral-900 sm:text-4xl">
+        <h2 className="font-serif text-3xl font-semibold uppercase tracking-wide text-neutral-900 sm:text-4xl">
           O nama
         </h2>
         <div className="mx-auto mt-4 h-px w-16 bg-accent" />

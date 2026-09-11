@@ -13,7 +13,7 @@ export default function PagePlaceholder({
       <Header />
       <main className="flex flex-1 items-center">
         <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
-          <h1 className="font-serif text-3xl tracking-wide text-neutral-900 uppercase sm:text-4xl">
+          <h1 className="font-serif text-3xl font-semibold tracking-wide text-neutral-900 uppercase sm:text-4xl">
             {title}
           </h1>
           <div className="mx-auto mt-4 h-px w-16 bg-accent" />

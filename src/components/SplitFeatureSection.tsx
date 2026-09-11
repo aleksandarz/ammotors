@@ -56,7 +56,7 @@ export default function SplitFeatureSection({
         </div>
 
         <div className="flex w-full flex-col justify-center gap-6 px-6 py-16 sm:px-10 lg:w-1/2 lg:px-16">
-          <h2 className="font-serif text-3xl leading-tight uppercase tracking-wide sm:text-4xl">
+          <h2 className="font-serif text-3xl font-semibold leading-tight uppercase tracking-wide sm:text-4xl">
             {title.map((line) => (
               <span key={line} className="block">
                 {line}
