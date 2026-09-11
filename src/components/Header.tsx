@@ -96,7 +96,7 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href="tel:+381600000000"
+            href="tel:+381665938839"
             aria-label="Pozovite nas"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-800 transition-colors hover:border-accent hover:text-accent"
           >
@@ -132,7 +132,7 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href="tel:+381600000000"
+            href="tel:+381665938839"
             className="rounded-md px-2 py-3 text-sm font-medium tracking-[0.1em] text-neutral-800 uppercase transition-colors hover:bg-neutral-50 hover:text-accent"
           >
             Pozovite nas

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import AboutSection from "@/components/AboutSection";
 import SplitFeatureSection from "@/components/SplitFeatureSection";
 import Footer from "@/components/Footer";
 
@@ -9,10 +10,11 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <AboutSection />
         <SplitFeatureSection
           id="otkup-prodaja"
-          title={["OTKUP I PRODAJA", "VOZILA"]}
-          description="AM Motors vrši profesionalnu procenu i otkup vozila po fer tržišnim uslovima, uz brzu isplatu i urednu papirologiju. Bilo da prodajete svoje vozilo ili tražite pouzdanog kupca, naš tim vas vodi kroz ceo proces — od procene do overe ugovora."
+          title={["OTKUP VOZILA"]}
+          description="Otkupljujemo sve vrste vozila – ispravna, neispravna i havarisana, bez obzira na marku, model ili godište. Izlazimo na teren, radimo besplatnu procenu i isplaćujemo odmah, u kešu, bez čekanja i suvišne papirologije. Kako otkup podrazumeva brzu isplatu i preuzimanje svih obaveza oko vozila, otkupna cena je nešto niža od tržišne vrednosti – to je cena koju plaćamo za brzinu, jednostavnost i sigurnost celog procesa."
           ctaLabel="Saznajte više"
           ctaHref="/prodaja-kola"
           imageSrc="/images/otkup-prodaja.jpg"
@@ -21,8 +23,8 @@ export default function Home() {
         />
         <SplitFeatureSection
           id="uvoz-vozila"
-          title={["UVOZ VOZILA", "PO NARUDŽBINI"]}
-          description="Pronalazimo i uvozimo vozila iz cele Evrope prema vašim željama i budžetu. Od pretrage i provere istorije vozila, preko carinjenja, do registracije — AM Motors vodi ceo proces uvoza umesto vas."
+          title={["UVOZ VOZILA"]}
+          description="Pored otkupa i prodaje, bavimo se i uvozom vozila iz Evrope, prvenstveno iz Nemačke. U dogovoru s vama pronalazimo vozilo koje odgovara vašim željama i budžetu i sprovodimo vas kroz ceo proces – od odabira i kupovine, preko uvoza, sve do dostavljanja vozila na vašu kućnu adresu."
           ctaLabel="Saznajte više"
           ctaHref="/uvoz-kola"
           imageSrc="/images/uvoz-vozila.jpg"

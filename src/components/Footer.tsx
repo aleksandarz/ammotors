@@ -21,8 +21,7 @@ export default function Footer() {
         </Link>
 
         <p className="text-xs font-medium tracking-[0.2em] text-neutral-300 uppercase">
-          {/* TODO: zameniti pravom adresom prodajnog salona */}
-          Adresa prodajnog salona, Grad
+          Luke Ćelovića Trebinjca, Beograd, Srbija
         </p>
 
         <div className="flex items-center gap-5">
@@ -40,12 +39,21 @@ export default function Footer() {
           ))}
         </div>
 
-        <a
-          href="tel:+381600000000"
-          className="text-lg font-medium tracking-widest text-white hover:text-accent"
-        >
-          +381 60 000 0000
-        </a>
+        <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-4">
+          <a
+            href="tel:+381665938839"
+            className="text-lg font-medium tracking-widest text-white hover:text-accent"
+          >
+            066 593 8839
+          </a>
+          <span className="hidden text-neutral-600 sm:inline">/</span>
+          <a
+            href="tel:+381611464997"
+            className="text-lg font-medium tracking-widest text-white hover:text-accent"
+          >
+            061 146 4997
+          </a>
+        </div>
 
         <p className="max-w-2xl text-xs leading-relaxed text-neutral-400">
           Ponuda vozila i cene su informativnog karaktera i podložne su
