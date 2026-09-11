@@ -8,36 +8,10 @@ const leftLinks = [
   { href: "/#uvoz-vozila", label: "Uvoz vozila" },
 ];
 
-// Kontakt has no href yet — it's not clickable until that page/section exists.
 const rightLinks = [
   { href: "/#o-nama", label: "O nama" },
-  { href: undefined, label: "Kontakt" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
-
-function NavItem({
-  href,
-  label,
-  className,
-  onClick,
-}: {
-  href?: string;
-  label: string;
-  className: string;
-  onClick?: () => void;
-}) {
-  if (!href) {
-    return (
-      <span aria-disabled="true" className={`${className} cursor-default text-neutral-400`}>
-        {label}
-      </span>
-    );
-  }
-  return (
-    <Link href={href} onClick={onClick} className={className}>
-      {label}
-    </Link>
-  );
-}
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -92,12 +66,13 @@ export default function Header() {
       <div className="mx-auto hidden h-24 max-w-7xl items-center justify-between px-6 lg:flex lg:px-10">
         <nav className="flex flex-1 items-center gap-8">
           {leftLinks.map((link) => (
-            <NavItem
-              key={link.label}
+            <Link
+              key={link.href}
               href={link.href}
-              label={link.label}
               className="text-xs font-medium tracking-[0.15em] text-neutral-700 uppercase transition-colors hover:text-accent"
-            />
+            >
+              {link.label}
+            </Link>
           ))}
         </nav>
 
@@ -112,12 +87,13 @@ export default function Header() {
 
         <nav className="flex flex-1 items-center justify-end gap-8">
           {rightLinks.map((link) => (
-            <NavItem
-              key={link.label}
+            <Link
+              key={link.href}
               href={link.href}
-              label={link.label}
               className="text-xs font-medium tracking-[0.15em] text-neutral-700 uppercase transition-colors hover:text-accent"
-            />
+            >
+              {link.label}
+            </Link>
           ))}
         </nav>
       </div>
@@ -126,13 +102,14 @@ export default function Header() {
       {open && (
         <nav className="flex flex-col gap-1 border-t border-neutral-200 bg-white px-4 py-4 lg:hidden">
           {[...leftLinks, ...rightLinks].map((link) => (
-            <NavItem
-              key={link.label}
+            <Link
+              key={link.href}
               href={link.href}
-              label={link.label}
               onClick={() => setOpen(false)}
               className="rounded-md px-2 py-3 text-sm font-medium tracking-widest text-neutral-800 uppercase transition-colors hover:bg-neutral-50 hover:text-accent"
-            />
+            >
+              {link.label}
+            </Link>
           ))}
           <a
             href="tel:+381665938839"

@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa6";
+
+const WHATSAPP_NUMBER = "381665938839";
 
 const socialLinks = [
   { href: "https://facebook.com", label: "Facebook", Icon: FaFacebookF },
@@ -9,7 +11,10 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-neutral-950 text-white">
+    <footer
+      id="kontakt"
+      className="mt-auto scroll-mt-32 bg-neutral-950 text-white lg:scroll-mt-24"
+    >
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6">
         <Link href="/" className="flex flex-col items-center">
           <span className="font-serif text-3xl font-bold tracking-[0.06em]">
@@ -57,6 +62,16 @@ export default function Footer() {
           </a>
         </div>
 
+        <a
+          href={`https://wa.me/${WHATSAPP_NUMBER}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950"
+        >
+          <FaWhatsapp aria-hidden="true" className="h-4 w-4" />
+          Pišite nam na WhatsApp
+        </a>
+
         <p className="max-w-2xl text-xs leading-relaxed text-neutral-400">
           Ponuda vozila i cene su informativnog karaktera i podložne su
           izmenama. Za detaljne informacije o vozilima iz prodaje i uvoza
@@ -86,13 +101,12 @@ export default function Footer() {
             >
               O nama
             </Link>
-            {/* Kontakt has no href yet — not clickable until that page/section exists. */}
-            <span
-              aria-disabled="true"
-              className="cursor-default text-xs font-medium tracking-[0.15em] text-neutral-600 uppercase"
+            <Link
+              href="/#kontakt"
+              className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase hover:text-accent"
             >
               Kontakt
-            </span>
+            </Link>
           </nav>
         </div>
 
