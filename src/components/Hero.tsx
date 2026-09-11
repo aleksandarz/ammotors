@@ -1,21 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroVideo from "@/components/HeroVideo";
 
 export default function Hero() {
   return (
     <section>
-      {/* Split image band — replace the two images in public/images
-          (hero-left.jpg / hero-right.jpg) with real photos. Loaded with
-          priority since this is the first thing visible (LCP element). */}
+      {/* Split image band — replace the right-side image in public/images
+          (hero-right.jpg) with a real photo. The left side autoplays a
+          muted, looping background video (GIF-style) instead of a photo. */}
       <div className="grid h-[46vh] min-h-[280px] w-full grid-cols-1 sm:h-[60vh] sm:grid-cols-2">
         <div className="relative bg-neutral-900">
-          <Image
-            src="/images/hero-left.jpg"
-            alt="Vozilo iz ponude AM Motors"
-            fill
-            sizes="(min-width: 640px) 50vw, 100vw"
-            className="object-cover"
-            priority
+          <HeroVideo
+            src="/videos/hero-left.mp4"
+            ariaLabel="Vozilo iz ponude AM Motors"
           />
         </div>
         <div className="relative hidden bg-neutral-800 sm:block">
