@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Fraunces, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,6 +14,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  display: "swap",
+  axes: ["opsz", "SOFT", "WONK"],
+});
+
 export const metadata: Metadata = {
   title: "AM Motors",
   description: "AM Motors — prodaja i uvoz automobila.",
@@ -23,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="sr"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-neutral-900">
         {children}
