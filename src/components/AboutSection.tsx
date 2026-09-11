@@ -28,11 +28,10 @@ export default function AboutSection() {
         </h2>
         <div className="mx-auto mt-4 h-px w-16 bg-accent" />
         <p className="mt-6 text-sm leading-relaxed text-neutral-600 sm:text-base">
-          AM Motors je nova firma iz Beograda, specijalizovana za otkup i
-          prodaju vozila, kao i uvoz automobila iz inostranstva. Iako smo tek
-          zakoračili na tržište, naš tim čine ljudi sa dugogodišnjim
-          iskustvom u auto-industriji, koji dobro poznaju procedure, tržišne
-          cene i, što je najvažnije, potrebe klijenata.
+          AM Motors je specijalizovan za otkup, prodaju i uvoz vozila iz
+          inostranstva. Naš tim čine profesionalci sa dugogodišnjim
+          iskustvom u auto-industriji, koji poznaju tržište, procedure i
+          ono što je klijentima najvažnije – sigurnu i korektnu saradnju.
         </p>
 
         <h3 className="mt-12 text-xs font-semibold tracking-[0.2em] text-neutral-900 uppercase">
