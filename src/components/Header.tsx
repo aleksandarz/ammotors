@@ -8,10 +8,36 @@ const leftLinks = [
   { href: "/#uvoz-vozila", label: "Uvoz vozila" },
 ];
 
+// Kontakt has no href yet — it's not clickable until that page/section exists.
 const rightLinks = [
   { href: "/#o-nama", label: "O nama" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: undefined, label: "Kontakt" },
 ];
+
+function NavItem({
+  href,
+  label,
+  className,
+  onClick,
+}: {
+  href?: string;
+  label: string;
+  className: string;
+  onClick?: () => void;
+}) {
+  if (!href) {
+    return (
+      <span aria-disabled="true" className={`${className} cursor-default text-neutral-400`}>
+        {label}
+      </span>
+    );
+  }
+  return (
+    <Link href={href} onClick={onClick} className={className}>
+      {label}
+    </Link>
+  );
+}
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -20,7 +46,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/95 backdrop-blur">
       {/* Mobile header: menu row above, centered logo row below */}
       <div className="lg:hidden">
-        <div className="flex h-14 items-center px-2">
+        <div className="flex h-16 items-center px-2">
           <button
             type="button"
             aria-label={open ? "Zatvori meni" : "Otvori meni"}
@@ -52,7 +78,7 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <Link href="/" className="flex flex-col items-center pb-4 text-center">
+        <Link href="/" className="flex flex-col items-center pb-5 text-center">
           <span className="font-serif text-2xl font-bold tracking-[0.06em] text-neutral-900">
             AM MOTORS
           </span>
@@ -63,16 +89,15 @@ export default function Header() {
       </div>
 
       {/* Desktop header: left nav / centered logo / right nav */}
-      <div className="mx-auto hidden h-20 max-w-7xl items-center justify-between px-6 lg:flex lg:px-10">
+      <div className="mx-auto hidden h-24 max-w-7xl items-center justify-between px-6 lg:flex lg:px-10">
         <nav className="flex flex-1 items-center gap-8">
           {leftLinks.map((link) => (
-            <Link
-              key={link.href}
+            <NavItem
+              key={link.label}
               href={link.href}
+              label={link.label}
               className="text-xs font-medium tracking-[0.15em] text-neutral-700 uppercase transition-colors hover:text-accent"
-            >
-              {link.label}
-            </Link>
+            />
           ))}
         </nav>
 
@@ -87,13 +112,12 @@ export default function Header() {
 
         <nav className="flex flex-1 items-center justify-end gap-8">
           {rightLinks.map((link) => (
-            <Link
-              key={link.href}
+            <NavItem
+              key={link.label}
               href={link.href}
+              label={link.label}
               className="text-xs font-medium tracking-[0.15em] text-neutral-700 uppercase transition-colors hover:text-accent"
-            >
-              {link.label}
-            </Link>
+            />
           ))}
         </nav>
       </div>
@@ -102,18 +126,17 @@ export default function Header() {
       {open && (
         <nav className="flex flex-col gap-1 border-t border-neutral-200 bg-white px-4 py-4 lg:hidden">
           {[...leftLinks, ...rightLinks].map((link) => (
-            <Link
-              key={link.href}
+            <NavItem
+              key={link.label}
               href={link.href}
+              label={link.label}
               onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-3 text-sm font-medium tracking-[0.1em] text-neutral-800 uppercase transition-colors hover:bg-neutral-50 hover:text-accent"
-            >
-              {link.label}
-            </Link>
+              className="rounded-md px-2 py-3 text-sm font-medium tracking-widest text-neutral-800 uppercase transition-colors hover:bg-neutral-50 hover:text-accent"
+            />
           ))}
           <a
             href="tel:+381665938839"
-            className="rounded-md px-2 py-3 text-sm font-medium tracking-[0.1em] text-neutral-800 uppercase transition-colors hover:bg-neutral-50 hover:text-accent"
+            className="rounded-md px-2 py-3 text-sm font-medium tracking-widest text-neutral-800 uppercase transition-colors hover:bg-neutral-50 hover:text-accent"
           >
             Pozovite nas
           </a>

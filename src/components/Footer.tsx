@@ -86,12 +86,13 @@ export default function Footer() {
             >
               O nama
             </Link>
-            <Link
-              href="/kontakt"
-              className="text-xs font-medium tracking-[0.15em] text-neutral-400 uppercase hover:text-accent"
+            {/* Kontakt has no href yet — not clickable until that page/section exists. */}
+            <span
+              aria-disabled="true"
+              className="cursor-default text-xs font-medium tracking-[0.15em] text-neutral-600 uppercase"
             >
               Kontakt
-            </Link>
+            </span>
           </nav>
         </div>
 
