@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa6";
 import { useInView } from "@/hooks/useInView";
 
 const reasons = [
-  "Brza i poštena procena vozila",
+  "Brza i realna procena vozila",
   "Isplata odmah, bez odlaganja",
   "Transparentnost u svakom koraku saradnje",
   "Posvećenost svakom klijentu ponaosob",
