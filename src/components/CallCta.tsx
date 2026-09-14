@@ -1,18 +1,22 @@
 "use client";
 
+import { useState } from "react";
 import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { useInView } from "@/hooks/useInView";
 
 const phoneNumbers = [
-  { display: "066 593 8839", tel: "+381665938839", whatsapp: "381665938839" },
-  { display: "061 146 4997", tel: "+381611464997", whatsapp: "381611464997" },
+  { display: "066 593 8839", tel: "+381665938839" },
+  { display: "061 146 4997", tel: "+381611464997" },
 ];
 
+const WHATSAPP_NUMBER = "381665938839";
+
 const buttonClass =
-  "inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-neutral-900";
+  "inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-neutral-900";
 
 export default function CallCta() {
   const { ref, inView } = useInView<HTMLDivElement>();
+  const [showNumbers, setShowNumbers] = useState(false);
 
   return (
     <section className="bg-white">
@@ -33,34 +37,47 @@ export default function CallCta() {
           pitanja.
         </p>
 
-        <div className="mx-auto mt-10 grid max-w-xl gap-10 sm:grid-cols-2">
-          {phoneNumbers.map((phone) => (
-            <div key={phone.tel} className="flex flex-col items-center gap-4">
-              <span className="text-sm font-medium tracking-widest text-neutral-900">
-                {phone.display}
-              </span>
-              <div className="flex items-center gap-3">
+        <div className="mt-10 flex flex-col items-center">
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button
+              type="button"
+              onClick={() => setShowNumbers((v) => !v)}
+              aria-expanded={showNumbers}
+              aria-controls="cta-phone-numbers"
+              className={buttonClass}
+            >
+              <FaPhone aria-hidden="true" className="h-3.5 w-3.5" />
+              Pozovite
+            </button>
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonClass}
+            >
+              <FaWhatsapp aria-hidden="true" className="h-3.5 w-3.5" />
+              WhatsApp
+            </a>
+          </div>
+
+          <div
+            id="cta-phone-numbers"
+            className={`grid w-full overflow-hidden transition-all duration-300 ease-out motion-reduce:transition-none ${
+              showNumbers ? "mt-4 max-h-32 opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="flex flex-col items-center gap-2 rounded-2xl border border-neutral-200 px-6 py-4">
+              {phoneNumbers.map((phone) => (
                 <a
+                  key={phone.tel}
                   href={`tel:${phone.tel}`}
-                  aria-label={`Pozovite ${phone.display}`}
-                  className={buttonClass}
+                  className="text-sm font-medium tracking-widest text-neutral-900 hover:text-accent"
                 >
-                  <FaPhone aria-hidden="true" className="h-3.5 w-3.5" />
-                  Pozovite
+                  {phone.display}
                 </a>
-                <a
-                  href={`https://wa.me/${phone.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`WhatsApp ${phone.display}`}
-                  className={buttonClass}
-                >
-                  <FaWhatsapp aria-hidden="true" className="h-3.5 w-3.5" />
-                  WhatsApp
-                </a>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
