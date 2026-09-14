@@ -111,12 +111,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="tel:+381665938839"
-            className="rounded-md px-2 py-3 text-sm font-medium tracking-widest text-neutral-800 uppercase transition-colors hover:bg-neutral-50 hover:text-accent"
-          >
-            Pozovite nas
-          </a>
         </nav>
       )}
     </header>
