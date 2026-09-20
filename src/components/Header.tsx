@@ -18,7 +18,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/95 backdrop-blur">
-      {/* Mobile header: menu row above, centered logo row below */}
       <div className="lg:hidden">
         <div className="flex h-16 items-center px-2">
           <button
@@ -62,7 +61,6 @@ export default function Header() {
         </Link>
       </div>
 
-      {/* Desktop header: left nav / centered logo / right nav */}
       <div className="mx-auto hidden h-24 max-w-7xl items-center justify-between px-6 lg:flex lg:px-10">
         <nav className="flex flex-1 items-center gap-8">
           {leftLinks.map((link) => (
@@ -98,7 +96,6 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* Mobile menu panel */}
       {open && (
         <nav className="flex flex-col gap-1 border-t border-neutral-200 bg-white px-4 py-4 lg:hidden">
           {[...leftLinks, ...rightLinks].map((link) => (

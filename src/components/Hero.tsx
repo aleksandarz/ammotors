@@ -4,8 +4,6 @@ import HeroVideo from "@/components/HeroVideo";
 export default function Hero() {
   return (
     <section>
-      {/* Full-bleed autoplaying background video (GIF-style: muted, looped,
-          no controls) spanning the whole band, left edge to right edge. */}
       <div className="relative h-[52vh] min-h-80 w-full bg-neutral-900 sm:h-[66vh]">
         <HeroVideo
           src="/videos/hero.mp4"
