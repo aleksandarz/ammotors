@@ -16,7 +16,7 @@ export default function Home() {
           title={["OTKUP VOZILA"]}
           description="Otkupljujemo sve vrste vozila – ispravna, neispravna i havarisana, bez obzira na marku, model ili godište. Izlazimo na teren, radimo besplatnu procenu i isplaćujemo odmah, u kešu, bez čekanja i suvišne papirologije. Kako otkup podrazumeva brzu isplatu i preuzimanje svih obaveza oko vozila, otkupna cena je niža od tržišne vrednosti – to je cena koju plaćamo za brzinu, jednostavnost i sigurnost celog procesa."
           ctaLabel="Saznajte više"
-          ctaHref="/prodaja-kola"
+          ctaHref="/#kontakt"
           imageSrc="/images/otkup-prodaja.jpg"
           imageAlt="Otkup i prodaja vozila u AM Motors"
           imagePosition="left"
@@ -26,7 +26,7 @@ export default function Home() {
           title={["UVOZ VOZILA"]}
           description="Pored otkupa i prodaje, bavimo se i uvozom vozila iz Evrope, prvenstveno iz Nemačke. U dogovoru s vama pronalazimo vozilo koje odgovara vašim željama i budžetu i sprovodimo vas kroz ceo proces – od odabira i kupovine, preko uvoza, sve do dostavljanja vozila na vašu kućnu adresu."
           ctaLabel="Saznajte više"
-          ctaHref="/uvoz-kola"
+          ctaHref="/#kontakt"
           imageSrc="/images/uvoz-vozila.jpg"
           imageAlt="Uvoz vozila u AM Motors"
           imagePosition="right"

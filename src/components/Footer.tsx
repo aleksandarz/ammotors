@@ -63,22 +63,6 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-4">
-          <a
-            href="tel:+381665938839"
-            className="text-lg font-medium tracking-widest text-white hover:text-accent"
-          >
-            066 593 8839
-          </a>
-          <span className="hidden text-neutral-600 sm:inline">/</span>
-          <a
-            href="tel:+381611464997"
-            className="text-lg font-medium tracking-widest text-white hover:text-accent"
-          >
-            061 146 4997
-          </a>
-        </div>
-
         <div className="flex flex-wrap items-center justify-center gap-2">
           {phoneNumbers.map((phone) => (
             <Fragment key={phone.tel}>
