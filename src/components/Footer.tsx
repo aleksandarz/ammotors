@@ -88,7 +88,7 @@ export default function Footer() {
               >
                 <FaWhatsapp
                   aria-hidden="true"
-                  className="ml-2 h-5 w-5 sm:ml-1.5 sm:h-4.5 sm:w-4.5"
+                  className="h-5 w-5 sm:h-4.5 sm:w-4.5"
                 />
                 <span className="sm:hidden">{phone.waLabel}</span>
                 <span className="hidden sm:inline">Pišite nam na WhatsApp</span>
