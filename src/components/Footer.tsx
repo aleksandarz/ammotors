@@ -24,7 +24,7 @@ const phoneNumbers = [
 ];
 
 const actionButtonClass =
-  "inline-flex items-start justify-center gap-1 rounded-full bg-accent px-4 py-2.5 text-center text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950 sm:items-center sm:px-2.5";
+  "inline-flex items-center justify-center gap-1 rounded-full bg-accent px-3 py-2.5 text-center text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950 sm:px-2.5";
 
 export default function Footer() {
   return (
