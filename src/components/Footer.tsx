@@ -24,7 +24,7 @@ const phoneNumbers = [
 ];
 
 const actionButtonClass =
-  "inline-flex items-center justify-center gap-1 rounded-full bg-accent px-2.5 py-2.5 text-center text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950";
+  "inline-flex items-center justify-center gap-1 rounded-full bg-accent px-3 py-2.5 text-center text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950 sm:px-2.5";
 
 export default function Footer() {
   return (
@@ -76,7 +76,10 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={actionButtonClass}
               >
-                <FaWhatsapp aria-hidden="true" className="ml-1.5 h-4.5 w-4.5" />
+                <FaWhatsapp
+                  aria-hidden="true"
+                  className="ml-2 h-5 w-5 sm:ml-1.5 sm:h-4.5 sm:w-4.5"
+                />
                 Pišite nam na WhatsApp
               </a>
             </Fragment>

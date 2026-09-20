@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="flex flex-shrink-0 flex-col items-center gap-3 sm:flex-row">
+        <div className="flex flex-shrink-0 flex-row items-center gap-3">
           <Link
             href="/#otkup-prodaja"
             className="inline-flex h-12 items-center justify-center rounded-full bg-neutral-900 px-8 text-xs font-medium tracking-[0.15em] text-white uppercase transition-colors hover:bg-accent"
