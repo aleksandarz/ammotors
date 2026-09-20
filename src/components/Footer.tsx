@@ -63,7 +63,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-2">
+        <div className="grid grid-flow-col grid-rows-2 justify-center gap-x-3 gap-y-2 sm:flex sm:flex-wrap sm:items-center sm:gap-2">
           {phoneNumbers.map((phone) => (
             <Fragment key={phone.tel}>
               <a href={`tel:${phone.tel}`} className={actionButtonClass}>
