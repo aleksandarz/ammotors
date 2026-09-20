@@ -1,13 +1,30 @@
+import { Fragment } from "react";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa6";
-
-const WHATSAPP_NUMBER = "381665938839";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPhone,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 const socialLinks = [
   { href: "https://facebook.com", label: "Facebook", Icon: FaFacebookF },
-  { href: "https://instagram.com", label: "Instagram", Icon: FaInstagram },
+  {
+    href: "https://www.instagram.com/ammotors.rs",
+    label: "Instagram",
+    Icon: FaInstagram,
+  },
   { href: "https://tiktok.com", label: "TikTok", Icon: FaTiktok },
 ];
+
+const phoneNumbers = [
+  { label: "Broj telefona 1", tel: "+381665938839", whatsapp: "381665938839" },
+  { label: "Broj telefona 2", tel: "+381611464997", whatsapp: "381611464997" },
+];
+
+const actionButtonClass =
+  "inline-flex items-center gap-1 rounded-full bg-accent px-3 py-2.5 text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950";
 
 export default function Footer() {
   return (
@@ -62,15 +79,25 @@ export default function Footer() {
           </a>
         </div>
 
-        <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950"
-        >
-          <FaWhatsapp aria-hidden="true" className="h-4 w-4" />
-          Pišite nam na WhatsApp
-        </a>
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          {phoneNumbers.map((phone) => (
+            <Fragment key={phone.tel}>
+              <a href={`tel:${phone.tel}`} className={actionButtonClass}>
+                <FaPhone aria-hidden="true" className="h-3.5 w-3.5" />
+                {phone.label}
+              </a>
+              <a
+                href={`https://wa.me/${phone.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={actionButtonClass}
+              >
+                <FaWhatsapp aria-hidden="true" className="h-3.5 w-3.5" />
+                Pišite nam na WhatsApp
+              </a>
+            </Fragment>
+          ))}
+        </div>
 
         <p className="max-w-2xl text-xs leading-relaxed text-neutral-400">
           Ponuda vozila i cene su informativnog karaktera i podložne su

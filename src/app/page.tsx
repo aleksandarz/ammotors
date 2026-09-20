@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import CallCta from "@/components/CallCta";
 import AboutSection from "@/components/AboutSection";
 import SplitFeatureSection from "@/components/SplitFeatureSection";
 import Footer from "@/components/Footer";
@@ -11,7 +10,6 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <CallCta />
         <AboutSection />
         <SplitFeatureSection
           id="otkup-prodaja"
