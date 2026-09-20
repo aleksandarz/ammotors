@@ -19,8 +19,18 @@ const socialLinks = [
 ];
 
 const phoneNumbers = [
-  { label: "Broj telefona 1", tel: "+381665938839", whatsapp: "381665938839" },
-  { label: "Broj telefona 2", tel: "+381611464997", whatsapp: "381611464997" },
+  {
+    label: "Broj telefona 1",
+    waLabel: "Whatsapp 1",
+    tel: "+381665938839",
+    whatsapp: "381665938839",
+  },
+  {
+    label: "Broj telefona 2",
+    waLabel: "Whatsapp 2",
+    tel: "+381611464997",
+    whatsapp: "381611464997",
+  },
 ];
 
 const actionButtonClass =
@@ -80,7 +90,8 @@ export default function Footer() {
                   aria-hidden="true"
                   className="ml-2 h-5 w-5 sm:ml-1.5 sm:h-4.5 sm:w-4.5"
                 />
-                Pišite nam na WhatsApp
+                <span className="sm:hidden">{phone.waLabel}</span>
+                <span className="hidden sm:inline">Pišite nam na WhatsApp</span>
               </a>
             </Fragment>
           ))}
