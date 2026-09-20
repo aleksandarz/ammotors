@@ -24,7 +24,7 @@ const phoneNumbers = [
 ];
 
 const actionButtonClass =
-  "inline-flex items-center gap-1 rounded-full bg-accent px-3 py-2.5 text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950";
+  "inline-flex items-center justify-center gap-1 rounded-full bg-accent px-2.5 py-2.5 text-center text-xs font-medium tracking-widest text-white uppercase transition-colors hover:bg-white hover:text-neutral-950";
 
 export default function Footer() {
   return (
@@ -63,11 +63,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="grid grid-flow-col grid-rows-2 justify-center gap-x-3 gap-y-2 sm:flex sm:flex-wrap sm:items-center sm:gap-2">
+        <div className="grid grid-flow-col grid-rows-2 justify-center gap-x-3 gap-y-2 sm:flex sm:flex-wrap sm:items-center sm:gap-1.5">
           {phoneNumbers.map((phone) => (
             <Fragment key={phone.tel}>
               <a href={`tel:${phone.tel}`} className={actionButtonClass}>
-                <FaPhone aria-hidden="true" className="h-3.5 w-3.5" />
+                <FaPhone aria-hidden="true" className="h-4 w-4" />
                 {phone.label}
               </a>
               <a
@@ -76,7 +76,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={actionButtonClass}
               >
-                <FaWhatsapp aria-hidden="true" className="h-3.5 w-3.5" />
+                <FaWhatsapp aria-hidden="true" className="h-4 w-4" />
                 Pišite nam na WhatsApp
               </a>
             </Fragment>
