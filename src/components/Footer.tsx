@@ -76,7 +76,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={actionButtonClass}
               >
-                <FaWhatsapp aria-hidden="true" className="h-4 w-4" />
+                <FaWhatsapp aria-hidden="true" className="ml-1.5 h-4.5 w-4.5" />
                 Pišite nam na WhatsApp
               </a>
             </Fragment>
