@@ -19,7 +19,7 @@ export default function Hero() {
             Otkup i prodaja svih vrsta vozila
           </h1>
           <div className="mx-auto mt-4 h-px w-16 bg-accent lg:mx-0" />
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-neutral-600 sm:text-base">
+          <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-neutral-600 sm:text-base lg:mx-0">
             AM Motors donosi pažljivo odabrana vozila iz otkupa i uvoza, uz
             proveren kvalitet i potpunu podršku kroz ceo proces kupovine.
           </p>
